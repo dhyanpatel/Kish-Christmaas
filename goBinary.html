@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="styling.css">
+    <title>You're Perfect Babe</title>
+    <script>
+        function validateTraitCheck() {
+            var gorgeous = document.getElementById("gorgeous").checked;
+            var amazing = document.getElementById("amazing").checked;
+            var talented = document.getElementById("talented").checked;
+            var intelligent = document.getElementById("intelligent").checked;
+            var cute = document.getElementById("cute").checked;
+            var understanding = document.getElementById("understanding").checked;
+            var loveable = document.getElementById("loveable").checked;
+            var teacher = document.getElementById("teacher").checked;
+            var marshmallow = document.getElementById("marshmallow").checked;
+            var hot = document.getElementById("hot").checked;
+            var social = document.getElementById("social").checked;
+            var insane = document.getElementById("insane").checked;
+            if (gorgeous && amazing && talented && intelligent && cute &&
+                understanding && loveable && teacher && marshmallow && hot &&
+                social && insane) {
+                window.location.href = "./merryChristmas.html"
+                return false;
+            } else {
+                alert("Nope! You didn't get all of em!");
+                return false;
+            }
+        }
+    </script>
 </head>
-<body>
+<body style="background-image: url('images/background_6.jpg')">
+<form name="traits" onsubmit="return validateTraitCheck()" method="post">
+    <h1 style="color: white">What are you?</h1>
+    <label style="color: greenyellow"><input type="checkbox" id="gorgeous" name="gorgeous" value="gorgeous"> <b>Gorgeous</b><br></label>
+    <label style="color: red"><input type="checkbox" id="amazing" name="amazing" value="amazing"> <b>Amazing</b><br></label>
+    <label style="color: greenyellow"><input type="checkbox" id="talented" name="talented" value="talented"> <b>Talented</b><br></label>
+    <label style="color: red"><input type="checkbox" id="intelligent" name="intelligent" value="intelligent"> <b>Intelligent</b><br></label>
+    <label style="color: greenyellow"><input type="checkbox" id="cute" name="cute" value="cute"> <b>A Cutie</b><br></label>
+    <label style="color: red"><input type="checkbox" id="understanding" name="understanding" value="understanding">
+        <b>Understanding</b><br></label>
+    <label style="color: greenyellow"><input type="checkbox" id="loveable" name="loveable" value="loveable"> <b>Loveable</b><br></label>
+    <label style="color: red"><input type="checkbox" id="teacher" name="teacher" value="teacher"> <b>An Amazing Teacher</b><br></label>
+    <label style="color: greenyellow"><input type="checkbox" id="marshmallow" name="marshmallow" value="marshmallow"> <b>A Marshmallow</b><br></label>
+    <label style="color: red"><input type="checkbox" id="hot" name="hot" value="hot"> <b>Hot as Fuck</b><br></label>
+    <label style="color: greenyellow"><input type="checkbox" id="social" name="social" value="social"> <b>Fun to talk to</b><br></label>
+    <label style="color: red"><input type="checkbox" id="insane" name="insane" value="insane"> <b>Not-so-vaguely Insane</b><br></label>
+    <input type="submit" style="color:black; background-color: dodgerblue">
+</form>
 
 </body>
 </html>
+<!-- Hint, the Title says it all -->
