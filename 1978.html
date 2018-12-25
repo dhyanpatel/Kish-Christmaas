@@ -15,12 +15,16 @@
                 alert("Try Again!");
                 return false;
             }
+            else{
+                window.location.replace("./goBinary.html")
+                return false;
+            }
         }
     </script>
 </head>
 <body style="background-image:url('images/background_5.png')">
 <h1 style="color: white">Check out the Title of this Page</h1>
-<form name="secret" action="goBinary.html" onsubmit="return validateBinaryConversion()" method="post">
+<form name="secret" onsubmit="return validateBinaryConversion()" method="post">
     <p style="color: orangered"><b><3</b></p> <!-- Hint: It's something on this line :) -->
     <input type="text" name="secret"><br>
     <input type="submit">
