@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Work In Progress</title>
+    <link rel="stylesheet" href="styling.css">
+    <title>Our Secret Language!</title>
+    <script>
+        function validateBinaryConversion() {
+            var x = document.forms["secret"]["secret"].value;
+            if (x === "<3"){
+                alert("Try some Binary :)");
+                return false;
+            }
+            else if (x !== "0011110000110011" && x !== "00111100 00110011") {
+                alert("Try Again!");
+                return false;
+            }
+        }
+    </script>
 </head>
-<body>
-Work in Progress
+<body style="background-image:url('images/background_5.png')">
+<h1 style="color: white">Check out the Title of this Page</h1>
+<form name="secret" action="goBinary.html" onsubmit="return validateBinaryConversion()" method="post">
+    <p style="color: orangered"><b><3</b></p> <!-- Hint: It's something on this line :) -->
+    <input type="text" name="secret"><br>
+    <input type="submit">
+</form>
 </body>
 </html>
